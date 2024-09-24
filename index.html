@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Header</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="">
+        <span class="logo">HEADER</span>
+        <nav class="">
+           <a href="">Home</a> 
+           <a href="">Services</a> 
+           <a href="">Products</a> 
+           <a href="">About Us</a> 
+           <a href="">Contact Us</a> 
+        </nav>
+            <div class="input-div">
+                <i class="input-search fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+      
+        <i class="search-icon fa-solid fa-magnifying-glass"></i>
+        <i class="menu-bar fa-solid fa-bars"></i>
+    </header>
+    <main>
+        <h1>Responsive Navbar</h1>
+        <h1>with</h1>
+        <h1>Search Bar</h1>
+    </main>
+    <script>
+        const searchIcon = document.querySelector(".search-icon")
+        const menuBar = document.querySelector(".menu-bar")
+        const inputDiv = document.querySelector(".input-div")
+        const header = document.querySelector("header")
+        const nav = document.querySelector("nav")
+        searchIcon.addEventListener('click',()=>{
+            header.classList.toggle("search-open")
+            searchIcon.classList.toggle("fa-xmark")
+        })
+        menuBar.addEventListener('click',()=>{
+            menuBar.classList.toggle("fa-xmark")
+            nav.classList.toggle("mobile-nav")
+        })
+        
+    </script>
+</body>
+</html>
